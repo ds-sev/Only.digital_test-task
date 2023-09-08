@@ -45,17 +45,16 @@ function updatePointer() {
   // get largest dimension increase
   const xScale = windowWidth / image.width
   const yScale = windowHeight / image.height
-  console.log(xScale)
   let scale
   let yOffset = 0
   let xOffset = 0
 
   if (xScale > yScale) {
-    // The image fits perfectly in x-axis, stretched in y
+    // the image fits perfectly in x-axis, stretched in y
     scale = xScale
     yOffset = (windowHeight - (image.height * scale)) / 2
   } else {
-    // The image fits perfectly in y-axis, stretched in x
+    // the image fits perfectly in y-axis, stretched in x
     scale = yScale
     xOffset = (windowWidth - (image.width * scale)) / 2
   }
