@@ -1,0 +1,138 @@
+.body {
+  margin: 0;
+  overscroll-behavior: none;
+}
+
+.main {
+  height: 100vh;
+}
+
+.page {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  background: url(./images/carnaby.jpeg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.page:after {
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #020f20;
+  opacity: .4;
+}
+
+.button {
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  margin-left: -20px;
+  margin-top: -20px;
+  width: 41px;
+  height: 41px;
+  border-radius: 50%;
+  border: none;
+  z-index: 1;
+  opacity: .7;
+  transition: opacity .2s;
+  cursor: pointer;
+}
+
+.button:after {
+  content: '';
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 50%;
+}
+
+.button:hover {
+  opacity: .9;
+  transition: opacity .1s;
+}
+
+.button_open {
+  opacity: 1;
+}
+
+.button_color_green {
+  background-color: #6abf4b;
+}
+
+.button_color_blue {
+  background-color: #3877ee;
+}
+
+.button__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 2px;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+}
+
+.button .button__icon:nth-child(2) {
+  transform: translate(-50%, -50%) rotate(0deg);
+  transition: transform .3s;
+}
+
+.button .button__icon:nth-child(1) {
+  transform: translate(-50%, -50%) rotate(90deg);
+  transition: transform .3s;
+}
+
+.button_open .button__icon:nth-child(2) {
+  transform: translate(-50%, -50%) rotate(-180deg);
+  transition: transform .3s;
+}
+
+.button_open .button__icon:nth-child(1) {
+  transform: translate(-50%, -50%) rotate(180deg);
+  transition: transform .3s;
+}
+
+.button__description {
+  margin: 0;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  align-items: center;
+  width: 41px;
+  height: 41px;
+  border-radius: 35px;
+  background-color: inherit;
+  z-index: -1;
+  transition: width .3s;
+  visibility: hidden;
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.button__description-container_open {
+  padding-right: 20px;
+  padding-left: 45px;
+  width: fit-content;
+  max-width: 300px;
+  visibility: visible;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+
+
